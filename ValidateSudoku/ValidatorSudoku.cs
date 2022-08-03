@@ -67,7 +67,10 @@ namespace ValidateSudoku
                 }
 
                 if (rowData.Distinct().Count() != rowData.Count())
+                {
                     throw new NotValidateSudokuException($"A number in multi-dimensional array may only appear once in a single row. The error was occured in {i+1}'s row");
+                }
+
                 rowData.Clear();
             }
         }
@@ -83,7 +86,9 @@ namespace ValidateSudoku
                 }
 
                 if (columnData.Distinct().Count() != columnData.Count())
+                {
                     throw new NotValidateSudokuException($"A number in multi-dimensional array may only appear once in a single column. The error was occured in {j + 1}'s column");
+                }
                 columnData.Clear();
             }
         }
@@ -105,7 +110,9 @@ namespace ValidateSudoku
                     }
 
                     if (squareData.Distinct().Count() != squareData.Count())
+                    {
                         throw new NotValidateSudokuException("A number in multi-dimensional array may only appear once in the Small square");
+                    }
                     squareData.Clear();
                 }
             }
