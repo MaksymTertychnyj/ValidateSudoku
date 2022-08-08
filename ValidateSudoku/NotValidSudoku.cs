@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace ValidateSudoku
 {
-    public class NotValidateSudokuException : Exception
+    public class NotValidSudoku
+        : Exception
     {
-        public NotValidateSudokuException(string message)
+        public NotValidSudoku(string message)
             : base(message)
         {
         }

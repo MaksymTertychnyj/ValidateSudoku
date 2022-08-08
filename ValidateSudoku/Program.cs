@@ -20,7 +20,7 @@ try
     validator.ToValidateSudoku();
     Console.WriteLine("data is valid");
 }
-catch (NotValidateSudokuException ex)
+catch (NotValidSudoku ex)
 {
     Console.WriteLine(ex.Message);
 }
